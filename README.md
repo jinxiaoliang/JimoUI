@@ -1,4 +1,4 @@
-# jl-ui
+# JviewUI
 
 ## Project setup
 ```

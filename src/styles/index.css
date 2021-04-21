@@ -1,1 +1,2 @@
-@import "./common.css";
+@import './common/index.css';
+@import './components/index.css';

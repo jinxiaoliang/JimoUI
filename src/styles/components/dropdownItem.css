@@ -1,0 +1,14 @@
+.dropdown-item {
+    list-style: none;
+    margin: 2px 0;
+    padding: 6px 0;
+    cursor: pointer;
+  }
+  .dropdown-item:hover {
+    background: rgb(245, 242, 242);
+  }
+  .dropitem-option.is-disabled * {
+    color: #ccc;
+    pointer-events: none;
+    background-color: transparent;
+  }

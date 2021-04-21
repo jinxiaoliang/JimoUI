@@ -1,0 +1,39 @@
+.collapse-item {
+    background: #ccc;
+  }
+  .collapse-item .title {
+    padding: 10px;
+    text-align: left;
+    cursor: pointer;
+  }
+  .collapse-item .content {
+    background: #fff;
+    padding: 10px;
+    text-align: left;
+  }
+  .icons-bottom {
+    transition: all .5s;
+    padding-right: 4px;
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+}
+  .icons-right {
+    padding-right: 4px;
+    transition: all .5s;
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+} 

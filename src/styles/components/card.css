@@ -1,0 +1,25 @@
+  .card {
+    min-width: 200px;
+    background: #fff;
+    border: 1px solid #ccc;
+    transition: .5s;
+  }
+  .card-pointer {
+    pointer-events: none;
+  }
+  .card-title {
+    border-bottom: 1px solid #ccc;
+    padding: 20px;
+    font-weight: 600;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .card-content {
+    padding: 20px;
+    text-align: left;
+  }
+  .card:hover {
+    box-shadow: 0 0 10px #ccc;
+  }

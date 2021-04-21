@@ -1,14 +1,19 @@
+import './styles/index.css'
 import Dropdown from './components/dropdown'
 import DropdownItem from './components/dropdownItem'
 import JButton from './components/button'
-import Jsplit from './components/split'
-import Jcard from './components/card'
+import JSplit from './components/split'
+import JCard from './components/card'
+import Collapse from './components/collapse'
+import CollapseItem from './components/collapseItem'
 const components = {
   Dropdown,
   DropdownItem,
   JButton,
-  Jsplit,
-  Jcard
+  JSplit,
+  JCard,
+  Collapse,
+  CollapseItem
 }
 const install = function (Vue) {
   // 判断是否安装

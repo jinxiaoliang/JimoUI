@@ -36,7 +36,6 @@ const Transition = {
     if (!el.dataset) el.dataset = {}
     el.dataset.oldPaddingTop = el.style.paddingTop
     el.dataset.oldPaddingBottom = el.style.paddingBottom
-    console.log(el.dataset.oldPaddingTop)
     el.dataset.oldOverflow = el.style.overflow
 
     el.style.height = el.scrollHeight + 'px'
@@ -59,8 +58,6 @@ const Transition = {
     el.style.overflow = el.dataset.oldOverflow
     el.style.paddingTop = el.dataset.oldPaddingTop
     el.style.paddingBottom = el.dataset.oldPaddingBottom
-    console.log(el)
-    console.log(el.style.padding)
   }
 }
 

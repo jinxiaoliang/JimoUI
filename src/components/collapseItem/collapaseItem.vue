@@ -1,6 +1,7 @@
 <template>
   <div class="collapse-item">
     <div class="title" @click="contentShow">
+      <j-icon type="angle-right" :class="icons"></j-icon>
       <slot></slot>
     </div>
     <collapse-transition>
@@ -15,6 +16,7 @@
 
 <script>
 import CollapseTransition from '../../base/collapse-transition.js'
+import JIcon from '../icon'
 export default {
   name: 'CollopseItem',
   props: {
@@ -24,12 +26,12 @@ export default {
     }
   },
   components: {
-    CollapseTransition
+    CollapseTransition,
+    JIcon
   },
   data () {
     return {
-      isShow: false,
-      currentShow: ''
+      isShow: false
     }
   },
   methods: {
@@ -44,6 +46,17 @@ export default {
       }
     }
   },
+  computed: {
+    icons: function () {
+      let icons = ''
+      if (this.isShow) {
+        icons = 'icons-bottom'
+      } else {
+        icons = 'icons-right'
+      }
+      return icons
+    }
+  },
   created () {
     const index = this.$parent.$children.findIndex(item => item.name === this.$parent.value)
     if (index > -1) {
@@ -52,23 +65,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-  .collapse-item {
-    background: #ccc;
-  }
-  .collapse-item .title::before {
-    content: "\003E";
-    font-size: 16px;
-  }
-  .collapse-item .title {
-    padding: 10px;
-    text-align: left;
-    cursor: pointer;
-  }
-  .collapse-item .content {
-    background: #fff;
-    padding: 10px;
-    text-align: left;
-  }
-</style>

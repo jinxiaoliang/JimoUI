@@ -1,5 +1,13 @@
 <template>
     <div style="text-align:center">
+      <div style="width: 500px; margin: 10px auto">
+          <h5>Icon图标</h5>
+          <j-icon type="camera-retro"  color="red"></j-icon>
+          <j-icon type="camera-retro"  color="red" times="2"></j-icon>
+          <j-icon type="camera-retro"  color="red" times="3"></j-icon>
+          <j-icon type="camera-retro"  color="red" times="4"></j-icon>
+          <j-icon type="camera-retro"  color="red" times="5"></j-icon>
+        </div>
       <div style="width: 100px; margin: 10px auto">
           <h5>下拉菜单</h5>
           <dropdown title="下拉菜单">
@@ -56,7 +64,29 @@
             </collapse-item>
           </collapse>
         </div>
+        <div style="width: 500px; margin: 10px auto">
+          <h5>菜单</h5>
+          <Menu v-model="menuValue">
+            <MenuItem name="1">
+              <JIcon type="ambulance"></JIcon>
+              xxx
+            </MenuItem>
+            <MenuItem name="2">
+              <JIcon type="address-card"></JIcon>
+              xxx
+            </MenuItem>
+            <MenuItem name="3">
+              <JIcon type="bathtub"></JIcon>
+              xxx
+            </MenuItem>
+            <MenuItem name="4">
+              <JIcon type="grav"></JIcon>
+              xxx
+            </MenuItem>
+          </Menu>
+        </div>
     </div>
+
 </template>
 
 <script>
@@ -67,11 +97,15 @@ import JSplit from '@/components/split'
 import JCard from '@/components/card'
 import Collapse from '@/components/collapse'
 import CollapseItem from '@/components/collapseItem'
+import JIcon from '@/components/icon'
+import Menu from '@/components/menu'
+import MenuItem from '@/components/menuItem'
 export default {
   data () {
     return {
       value: 0.5,
-      collapseValue: '2'
+      collapseValue: '2',
+      menuValue: '1'
     }
   },
   components: {
@@ -81,7 +115,10 @@ export default {
     JSplit,
     JCard,
     Collapse,
-    CollapseItem
+    CollapseItem,
+    JIcon,
+    Menu,
+    MenuItem
   },
   methods: {
     onClick () {

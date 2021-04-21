@@ -21,10 +21,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-  .collapse {
-    min-width: 100px;
-    border: 1px solid #ccc;
-  }
-</style>

@@ -6,6 +6,10 @@ import JSplit from './components/split'
 import JCard from './components/card'
 import Collapse from './components/collapse'
 import CollapseItem from './components/collapseItem'
+import Menu from './components/menu'
+import MenuItem from './components/menuItem'
+import JIcon from './components/icon'
+import Input from './components/input'
 const components = {
   Dropdown,
   DropdownItem,
@@ -13,7 +17,11 @@ const components = {
   JSplit,
   JCard,
   Collapse,
-  CollapseItem
+  CollapseItem,
+  JIcon,
+  Input,
+  Menu,
+  MenuItem
 }
 const install = function (Vue) {
   // 判断是否安装

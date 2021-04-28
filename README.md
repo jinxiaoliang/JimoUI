@@ -1,24 +1,14 @@
 # JviewUI
 
-## Project setup
+## First
 ```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
+npm install jview-ui --save
 ```
 
-### Compiles and minifies for production
+## Second -  main.js 
 ```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
+import JviewUI from 'jview-ui'
+import 'jview-ui/lib/jview-ui'
+Vue.use(JviewUI)
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

@@ -1,0 +1,28 @@
+.menu-item {
+    padding: 0 20px;
+    font-size: 20px;
+    font-weight: 400;
+    transition: all .5s;
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+  .menu-item-level {
+    border-bottom: transparent;
+    height: 60px;
+  }
+  .menu-item-level-active, .menu-item-level:hover {
+    color: #2d8cf0;
+    border-bottom: 2px solid #2d8cf0;
+  }
+  .menu-item-vertical {
+    text-align: left;
+    width: 100%;
+    border-right: transparent;
+    height: 60px;
+    line-height: 60px;
+  }
+  .menu-item-vertical-active, .menu-item-vertical:hover {
+    color: #2d8cf0;
+    border-right: 2px solid #2d8cf0 ;
+    background: #f0faff
+  }

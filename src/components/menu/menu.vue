@@ -1,5 +1,5 @@
 <template>
-  <ul class="menu">
+  <ul :class="classes">
     <slot></slot>
   </ul>
 </template>
@@ -11,23 +11,22 @@ export default {
     value: {
       type: String,
       default: ''
+    },
+    mode: {
+      type: String,
+      default: 'level'
     }
   },
   data () {
     return {}
+  },
+  computed: {
+    classes: function () {
+      return [
+        'menu',
+        `menu-${this.mode}`
+      ]
+    }
   }
 }
 </script>
-
-<style scoped>
-  .menu {
-    width: 100%;
-    min-width: 500px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    height: 60px;
-    line-height: 60px;
-    z-index: 999;
-  }
-</style>

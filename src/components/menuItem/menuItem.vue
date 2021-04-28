@@ -11,7 +11,8 @@ export default {
     name: {
       type: String,
       required: true
-    }
+    },
+    to: [Object, String]
   },
   data () {
     return {
@@ -25,11 +26,15 @@ export default {
         item.isActive = false
         return item
       })
+      this.to instanceof Object ? this.$router.push(this.to.path || this.to.name) : this.$router.push(this.to)
     }
   },
   computed: {
     classes: function () {
-      return { 'menu-item-active': this.isActive }
+      return [
+        { [`menu-item-${this.$parent.mode}-active`]: this.isActive },
+        `menu-item-${this.$parent.mode}`
+      ]
     }
   },
   created () {
@@ -40,19 +45,3 @@ export default {
   }
 }
 </script>
-<style scoped>
-.menu-item {
-  transition: all .5s;
-  border-bottom: transparent;
-  padding: 0 20px;
-  font-size: 20px;
-  font-weight: 400;
-  height: 60px;
-  box-sizing: border-box;
-  cursor: pointer;
-}
-.menu-item-active, .menu-item:hover {
-  color: #2d8cf0;
-  border-bottom: 2px solid #2d8cf0 ;
-}
-</style>

@@ -64,26 +64,33 @@
             </collapse-item>
           </collapse>
         </div>
-        <div style="width: 500px; margin: 10px auto">
+        <div style="margin: 10px auto">
           <h5>菜单</h5>
           <Menu v-model="menuValue">
             <MenuItem name="1">
               <JIcon type="ambulance"></JIcon>
-              xxx
+              菜单1
             </MenuItem>
             <MenuItem name="2">
               <JIcon type="address-card"></JIcon>
-              xxx
+              菜单2
             </MenuItem>
             <MenuItem name="3">
-              <JIcon type="bathtub"></JIcon>
-              xxx
+              <JIcon type="address-card"></JIcon>
+              菜单3
             </MenuItem>
             <MenuItem name="4">
               <JIcon type="grav"></JIcon>
-              xxx
+              菜单4
             </MenuItem>
           </Menu>
+        </div>
+        <div style="height: 400px; margin: 10px auto">
+          <h5>Input输入框</h5>
+          <Input placeholder="Enter Something...." v-model="inputValue" clearable></Input>
+          <Input placeholder="Enter Something...." type="password" password></Input>
+          <Input placeholder="Enter Something...." icon="bath"></Input>
+          <Input placeholder="Enter Something...." icon="bath" position="start"></Input>
         </div>
     </div>
 
@@ -100,12 +107,14 @@ import CollapseItem from '@/components/collapseItem'
 import JIcon from '@/components/icon'
 import Menu from '@/components/menu'
 import MenuItem from '@/components/menuItem'
+import Input from '@/components/input'
 export default {
   data () {
     return {
       value: 0.5,
       collapseValue: '2',
-      menuValue: '1'
+      menuValue: '1',
+      inputValue: ''
     }
   },
   components: {
@@ -118,7 +127,8 @@ export default {
     CollapseItem,
     JIcon,
     Menu,
-    MenuItem
+    MenuItem,
+    Input
   },
   methods: {
     onClick () {
@@ -127,13 +137,3 @@ export default {
 
 }
 </script>
-
-<style>
-  button {
-    margin: 0 4px;
-  }
-  p {
-    margin: 0;
-    padding: 0
-  }
-</style>

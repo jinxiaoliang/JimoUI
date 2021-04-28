@@ -3,7 +3,7 @@
     :style="[{border: (border ? '1px solid #ccc' : 'none')}, {boxShadow:(shadow ? '' : '')}]"
     :class="{'card-pointer': !shadow}"
   >
-    <div class="card-title">
+    <div class="card-title" v-if="$slots.title || $slots.extra">
       <slot name="title"></slot>
       <slot name="extra"></slot>
     </div>

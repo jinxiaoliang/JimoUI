@@ -1,0 +1,48 @@
+.j-input {
+    min-width: 100px;
+    width: 200px;
+    position: relative;
+  }
+  .j-input .input-end {
+    width: 100%;
+    padding: 10px 30px 10px 10px;
+    outline: none;
+    font-weight: 400;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    transition: all .5s;
+  }
+  .j-input .input-start {
+    width: 100%;
+    padding: 10px 10px 10px 30px;
+    outline: none;
+    font-weight: 400;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    transition: all .5s;
+  }
+  .j-input:hover .input {
+    border: 1px solid #2d8cf0
+  }
+  .j-input .input-active {
+    border: 1px solid #2d8cf0;
+    box-shadow: 0 0 4px #2d8cf0;
+  }
+  .j-input .input-icons-end {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  .j-input .input-icons-start {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+    font-size: 12px;
+    cursor: pointer;
+  }

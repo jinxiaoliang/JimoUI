@@ -1,3 +1,11 @@
+.light {
+  background-color: #fff;
+  color: #000
+}
+.black {
+  background-color: #3B445B;
+  color: #fff;
+}
 .split-pane-wrapper {
     min-width: 300px;
     min-height: 200px;
@@ -15,7 +23,6 @@
   .split-pane-wrapper .pane-left {
     height: 100%;
     width: 20%;
-    background: #fff;
     word-break: break-all;
   }
   .split-pane-wrapper .pane-right {
@@ -23,11 +30,9 @@
     right: 0;
     bottom: 0;
     left: 20%;
-    background: #fff;
   }
   .split-pane-wrapper .pane-trigger {
     height: 100%;
-    background: #f8f8f9;
     border: 1px solid #dcdee2;
     border-top: none;
     border-bottom: none;

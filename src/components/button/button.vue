@@ -1,23 +1,16 @@
 <template>
   <button
-  :class="[
-    type === 'primary' ? 'btn-primary' : '',
-    type === 'dashed' ? 'btn-dashed' : '',
-    type === 'info' ? 'btn-info' : '',
-    type === 'success' ? 'btn-success' : '',
-    type === 'warning' ? 'btn-warning' : '',
-    type === 'error' ? 'btn-error' : '',
-    disabled ? 'btn-disabled' : ''
-  ]"
-  class="btn"
+  :class="classes"
   :disabled="disabled"
   @click="handleClick"
   >
-    <slot></slot>
+  <JICon :type="icon"></JICon>
+   <span><slot></slot></span>
   </button>
 </template>
 
 <script>
+import JICon from '../icon'
 export default {
   name: 'JButton',
   props: {
@@ -28,15 +21,34 @@ export default {
     disabled: {
       type: Boolean,
       default: false
+    },
+    icon: {
+      type: String,
+      default: ''
+    },
+    shape: {
+      type: String,
+      default: ''
     }
   },
-  data () {
-    return {
-    }
+  components: {
+    JICon
   },
   methods: {
     handleClick (event) {
       this.$emit('click', event)
+    }
+  },
+  computed: {
+    classes () {
+      return [
+        {
+          [`btn-${this.type}`]: this.type,
+          'btn-disabled': this.disabled,
+          [`btn-${this.shape}`]: this.shape
+        },
+        'btn'
+      ]
     }
   }
 }

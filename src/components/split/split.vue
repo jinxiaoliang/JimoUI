@@ -1,5 +1,5 @@
 <template>
-  <div class="split-pane-wrapper" ref="splitOuter">
+  <div :class="classes" ref="splitOuter">
     <div
       class="pane pane-left"
       :style="{
@@ -38,6 +38,10 @@ export default {
       type: Number,
       default: 0.3
     },
+    theme: {
+      type: String,
+      default: 'light'
+    },
     max: {
       type: Number,
       default: 0.9
@@ -60,6 +64,12 @@ export default {
     },
     triggerLeft () {
       return `calc(${this.leftOffSet * 100}% - ${this.triggerWidth / 2}px)`
+    },
+    classes () {
+      return [
+        'split-pane-wrapper',
+        `${this.theme}`
+      ]
     }
   },
   methods: {

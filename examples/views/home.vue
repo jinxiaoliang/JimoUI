@@ -27,10 +27,18 @@
           <j-button type="warning">Warning</j-button>
           <j-button type="error">Error</j-button>
           <j-button disabled type="warning">Disabled</j-button>
+          <j-button type="primary" icon="search"></j-button>
+          <j-button type="primary" icon="search" shape="circle"></j-button>
+          <j-button type="primary" icon="search">Primary</j-button>
         </div>
         <div style="width: 500px; margin: 10px auto">
           <h5>分割面板</h5>
           <j-split v-model="value">
+            <div slot="left">我是左边</div>
+            <div slot="right">我是右边</div>
+          </j-split>
+          <br>
+          <j-split v-model="value" theme='black'>
             <div slot="left">我是左边</div>
             <div slot="right">我是右边</div>
           </j-split>

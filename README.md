@@ -2,13 +2,13 @@
 
 ## First
 ```
-npm install jview-ui --save
+npm install jimo-ui --save
 ```
 
 ## Second -  main.js 
 ```
-import JviewUI from 'jview-ui'
-import 'jview-ui/lib/jview-ui'
-Vue.use(JviewUI)
+import JimoUI from 'jimo-ui'
+import 'jimo-ui/lib/jimo-ui.css'
+Vue.use(JimoUI)
 ```
 

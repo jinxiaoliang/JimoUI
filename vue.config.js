@@ -28,11 +28,9 @@ const devConfig = {
 
 const buildConfig = {
   chainWebpack: config => {
-    // src和examples目录需要加入编译
+    // src目录需要加入编译
     config.module
       .rule('js')
-      .include.add(/examples/)
-      .end()
       .include.add(/src/)
       .end()
       .use('babel')

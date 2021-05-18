@@ -45,11 +45,15 @@ export default {
         {
           [`btn-${this.type}`]: this.type,
           'btn-disabled': this.disabled,
-          [`btn-${this.shape}`]: this.shape
+          'btn-circle': this.shape === 'circle',
+          'btn-icon': Object.keys(this.$slots).length && this.icon
         },
         'btn'
       ]
     }
+  },
+  created () {
+    console.log(this.$slots)
   }
 }
 </script>

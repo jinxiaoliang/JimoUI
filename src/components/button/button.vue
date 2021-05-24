@@ -5,6 +5,7 @@
   @click="handleClick"
   >
   <JICon :type="icon"></JICon>
+  <JICon :type="loading ? 'circle-o-notch' : ''" :class="iconClass"></JICon>
    <span><slot></slot></span>
   </button>
 </template>
@@ -29,6 +30,10 @@ export default {
     shape: {
       type: String,
       default: ''
+    },
+    loading: {
+      type: Boolean,
+      default: false
     }
   },
   components: {
@@ -49,6 +54,11 @@ export default {
           'btn-icon': Object.keys(this.$slots).length && this.icon
         },
         'btn'
+      ]
+    },
+    iconClass () {
+      return [
+        { 'btn-loading': this.loading }
       ]
     }
   },

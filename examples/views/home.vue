@@ -30,6 +30,7 @@
           <j-button type="primary" icon="search"></j-button>
           <j-button type="primary" icon="search" shape="circle"></j-button>
           <j-button type="primary" icon="search">Primary</j-button>
+          <j-button type="primary" loading></j-button>
         </div>
         <div style="width: 500px; margin: 10px auto">
           <h5>分割面板</h5>

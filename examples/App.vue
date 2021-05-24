@@ -1,4 +1,3 @@
-
 <template>
   <div>
     <router-view/>
@@ -11,6 +10,6 @@ export default {
   }
 }
 </script>
-<style>
-  @import "../src/styles/index.css";
+<style lang="less">
+  @import "../src/styles/index.less";
 </style>

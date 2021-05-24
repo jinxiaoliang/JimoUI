@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
 function load (component) {
-  return resolve => require([`../views/${component}`], resolve)
+  return resolve => require([`../views/${component}.vue`], resolve)
 }
 
 const routes = [

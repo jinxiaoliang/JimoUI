@@ -22,6 +22,22 @@ const devConfig = {
         assets: resolve('examples/assets'),
         views: resolve('examples/views')
       }
+    },
+    module: {
+      rules: [
+        // {
+        //   test: /\.vue$/,
+        //   use: 'vue-loader'
+        // },
+        // {
+        //   test: /\.less$/,
+        //   use: ['style-loader', 'less-loader', 'css-loader']
+        // },
+        // {
+        //   test: /\.css$/,
+        //   use: ['style-loader', 'css-loader']
+        // }
+      ]
     }
   }
 }

@@ -1,4 +1,4 @@
-import './styles/index.css'
+import './styles/index.less'
 import Dropdown from './components/dropdown'
 import DropdownItem from './components/dropdownItem'
 import JButton from './components/button'

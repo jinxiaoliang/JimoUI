@@ -1,0 +1,96 @@
+@btn-default-color: #2d8cf0;
+
+.btn {
+  padding: 10px;
+  margin: 0 4px;
+  border-radius: 4px;
+  background: #fff;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: color 0.5s, opacity 0.5s, border 0.5s;
+  font-weight: 600;
+  outline: none;
+  &:hover {
+    color: @btn-default-color;
+    border: 1px solid @btn-default-color;
+    opacity: .8;
+  }
+  &-primary {
+    border: 1px solid @btn-default-color;
+    background: @btn-default-color;
+    color: #fff;
+    &:hover {
+      color: #fff;
+      border: 1px solid @btn-default-color;
+    }
+  }
+  &-dashed {
+    border: 1px dashed #ccc;
+    &:hover {
+      color: @btn-default-color;
+      border: 1px dashed @btn-default-color;
+    }
+  }
+  &-info {
+    background: #2db7f5;
+    border: 1px solid #2db7f5;
+    color: #fff;
+    &:hover {
+      color: #fff;
+      border: 1px solid #2db7f5;
+    }
+  }
+  &-success {
+    background: #19be6b;
+    border: 1px solid #19be6b;
+    color: #fff;
+    &:hover {
+      color: #fff;
+      border: 1px solid #19be6b;
+    }
+  }
+  &-warning {
+    background: #f90;
+    border: 1px solid #f90;
+    color: #fff;
+    &:hover {
+      color: #fff;
+      border: 1px solid #f90
+    }
+  }
+  &-error {
+    background: #ed4014;
+    border: 1px solid #ed4014;
+    color: #fff;
+    &:hover {
+      color: #fff;
+      border: 1px solid #ed4014;
+    }
+  }
+  &-disabled {
+    cursor: not-allowed;
+    color: #c5c8ce !important;
+    background-color: #f7f7f7 !important;
+    border-color: #dcdee2 !important;
+    &:hover {
+      color: #c5c8ce !important;
+      background-color: #f7f7f7 !important;
+      border-color: #dcdee2 !important;
+      opacity: 1;
+    }
+  }
+  &-circle {
+    border-radius: 50%;
+  }
+  &-span {
+    margin-left: 10px;
+  }
+  &-icon > span {
+    margin-left: 6px
+  }
+  &-loading {
+    animation: btn-loading 3s linear infinite;
+    -webkit-animation: btn-loading 3s linear infinite;
+  }
+}
+

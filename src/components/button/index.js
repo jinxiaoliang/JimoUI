@@ -1,2 +1,2 @@
-import JButton from './button'
+import JButton from './button.vue'
 export default JButton

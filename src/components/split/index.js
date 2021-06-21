@@ -1,2 +1,2 @@
-import JSplit from './split'
+import JSplit from './split.vue'
 export default JSplit

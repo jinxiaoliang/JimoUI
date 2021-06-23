@@ -106,17 +106,6 @@
 </template>
 
 <script>
-import Dropdown from '@/components/dropdown'
-import DropdownItem from '@/components/dropdownItem'
-import JButton from '@/components/button'
-import JSplit from '@/components/split'
-import JCard from '@/components/card'
-import Collapse from '@/components/collapse'
-import CollapseItem from '@/components/collapseItem'
-import JIcon from '@/components/icon'
-import Menu from '@/components/menu'
-import MenuItem from '@/components/menuItem'
-import Input from '@/components/input'
 export default {
   data () {
     return {
@@ -125,19 +114,6 @@ export default {
       menuValue: '1',
       inputValue: ''
     }
-  },
-  components: {
-    Dropdown,
-    DropdownItem,
-    JButton,
-    JSplit,
-    JCard,
-    Collapse,
-    CollapseItem,
-    JIcon,
-    Menu,
-    MenuItem,
-    Input
   },
   methods: {
     onClick () {

@@ -1,5 +1,6 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const VueLoaderPlugin = require('vue-loader/lib/plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 module.exports = {
   module: {
     rules: [
@@ -21,35 +22,35 @@ module.exports = {
       },
       {
         test: /\.(eot|ttf|woff|woff2|svg)$/,
-        // use: {
-        //   loader: 'url-loader',
-        //   options: {
-        //     // placeholder
-        //     name: '[name].[ext]',
-        //     outputPath: 'font'
-        //   }
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: '8192',
+              outputPath: 'fonts'
+            }
+          }
+        ]
+        // type: 'asset/resource',
+        // generator: {
+        //   filename: 'fonts/[name][ext]'
         // }
-        type: 'asset/resource',
-        generator: {
-          filename: 'font/[name][ext]'
-        }
       },
       {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
-        type: 'asset/resource',
-        generator: {
-          filename: 'style/css/[name][ext]'
-        }
-      },
-      {
-        test: /\.less$/,
-        use: ['style-loader', 'css-loader', 'less-loader']
+        test: /\.(less|css)$/,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader
+          },
+          'css-loader',
+          'less-loader'
+        ]
       }
     ]
   },
   plugins: [
-    new HtmlWebpackPlugin({ template: 'public/index.html' }),
-    new CleanWebpackPlugin()
+    new CleanWebpackPlugin(),
+    new VueLoaderPlugin(),
+    new MiniCssExtractPlugin({})
   ]
 }

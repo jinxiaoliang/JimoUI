@@ -1,5 +1,5 @@
-examples/
-src/
-public/
-vue.config.js
-babel.config.js
+.*
+*.md
+*.yml
+build/
+node_modules/

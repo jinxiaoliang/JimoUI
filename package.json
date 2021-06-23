@@ -1,9 +1,13 @@
 {
   "name": "jimo-ui",
-  "version": "0.1.1",
-  "title": "JviewUI",
+  "version": "0.1.7",
+  "title": "JimoUI",
   "private": false,
-  "main": "lib/jimo-ui.umd.js",
+  "main": "dist/jimo.js",
+  "files": [
+    "src",
+    "dist"
+  ],
   "keyword": [
     "vue",
     "JimoUI",
@@ -16,9 +20,9 @@
   "author": "",
   "scripts": {
     "serve": "webpack-dev-server --config ./build/webpack.dev.js",
+    "dist": "webpack --config ./build/webpack.prod.js",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "lib": "vue-cli-service build --target lib --name jimo-ui --dest lib src/index.js"
+    "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "core-js": "^3.6.5",
@@ -45,7 +49,10 @@
     "html-webpack-plugin": "^5.3.1",
     "less": "^4.1.1",
     "less-loader": "^7.0.0",
+    "mini-css-extract-plugin": "^1.6.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.6",
     "style-loader": "^2.0.0",
+    "uglifyjs-webpack-plugin": "^2.2.0",
     "url-loader": "^4.1.1",
     "vue-loader": "^15.9.7",
     "vue-router": "^3.5.1",

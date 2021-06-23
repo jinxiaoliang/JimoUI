@@ -1,8 +1,9 @@
 const path = require('path')
 const webpack = require('webpack')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { merge } = require('webpack-merge')
 const commonConfig = require('./webpack.common')
-const { VueLoaderPlugin } = require('vue-loader')
+
 const devConfig = {
   mode: 'development',
   devtool: 'eval-cheap-module-source-map',
@@ -22,7 +23,7 @@ const devConfig = {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new VueLoaderPlugin()
+    new HtmlWebpackPlugin({ template: 'public/index.html' })
   ]
 }
 module.exports = merge(commonConfig, devConfig)

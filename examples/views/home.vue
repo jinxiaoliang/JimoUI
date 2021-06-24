@@ -38,11 +38,6 @@
             <div slot="left">我是左边</div>
             <div slot="right">我是右边</div>
           </j-split>
-          <br>
-          <j-split v-model="value" theme='black'>
-            <div slot="left">我是左边</div>
-            <div slot="right">我是右边</div>
-          </j-split>
         </div>
         <div style="width: 500px; margin: 10px auto">
           <h5>卡片</h5>
@@ -100,20 +95,49 @@
           <Input placeholder="Enter Something...." type="password" password></Input>
           <Input placeholder="Enter Something...." icon="bath"></Input>
           <Input placeholder="Enter Something...." icon="bath" position="start"></Input>
+          <Input placeholder="Enter Something...." maxlength="10" v-model="maxValue"></Input>
+          <Input placeholder="Enter Something...." search v-model="search"></Input>
+          <Input placeholder="Enter Something...." disabled></Input>
         </div>
     </div>
 
 </template>
 
 <script>
+import Dropdown from '@/components/dropdown'
+import DropdownItem from '@/components/dropdownItem'
+import JButton from '@/components/button'
+import JSplit from '@/components/split'
+import JCard from '@/components/card'
+import Collapse from '@/components/collapse'
+import CollapseItem from '@/components/collapseItem'
+import JIcon from '@/components/icon'
+import Menu from '@/components/menu'
+import MenuItem from '@/components/menuItem'
+import Input from '@/components/input'
 export default {
   data () {
     return {
       value: 0.5,
       collapseValue: '2',
       menuValue: '1',
-      inputValue: ''
+      inputValue: 'test--test--test',
+      maxValue: '111111111',
+      search: ''
     }
+  },
+  components: {
+    Dropdown,
+    DropdownItem,
+    JButton,
+    JSplit,
+    JCard,
+    Collapse,
+    CollapseItem,
+    JIcon,
+    Menu,
+    MenuItem,
+    Input
   },
   methods: {
     onClick () {

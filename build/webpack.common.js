@@ -2,6 +2,9 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 module.exports = {
+  resolve: {
+    extensions: ['.vue', '.js']
+  },
   module: {
     rules: [
       {

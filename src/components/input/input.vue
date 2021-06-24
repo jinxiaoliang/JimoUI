@@ -7,11 +7,14 @@
       v-bind="$attrs"
       @focus="handleFocus"
       @blur="handleBlur"
+      :maxlength="maxlength"
+      :disabled="disabled"
     />
     <j-icon type="close" :class="icons" v-show="clearable && iconShow && hoverShow" @click="iconsClick"></j-icon>
     <j-icon type="eye" :class="icons" v-if="password && passwordShow" @click="passwordClick"></j-icon>
     <j-icon type="eye-slash" :class="icons" v-if="password && !passwordShow" @click="passwordClick"></j-icon>
     <j-icon :type="icon" :class="icons" v-if="icon" @click="passwordClick"></j-icon>
+    <span v-show="maxlength" class="input-icons-end">{{ curlength }}/{{ maxlength }}</span>
   </div>
 </template>
 
@@ -21,6 +24,9 @@ export default {
   name: 'Input',
   props: {
     value: {
+      type: [Number, String]
+    },
+    maxlength: {
       type: [Number, String]
     },
     type: {
@@ -42,6 +48,10 @@ export default {
     position: {
       type: String,
       default: 'end'
+    },
+    disabled: {
+      type: Boolean,
+      default: false
     }
   },
   components: {
@@ -85,12 +95,20 @@ export default {
         this.$emit('input', val)
       }
     },
+    curlength: function () {
+      let len = 0
+      if (this.value) {
+        len = this.value.length
+      }
+      return len
+    },
     classes: function () {
       return [
         {
           'input-active': this.focusActive,
           'input-end': this.position === 'end',
-          'input-start': this.position === 'start'
+          'input-start': this.position === 'start',
+          'input-disabled': this.disabled
         }
       ]
     },

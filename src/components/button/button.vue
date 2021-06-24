@@ -5,7 +5,7 @@
   @click="handleClick"
   >
   <JICon :type="icon"></JICon>
-  <JICon :type="loading ? 'circle-o-notch' : ''" :class="iconClass"></JICon>
+  <JICon :type="loading ? 'circle-o-notch' : ''" :class="iconClass" v-show="loading"></JICon>
    <span><slot></slot></span>
   </button>
 </template>

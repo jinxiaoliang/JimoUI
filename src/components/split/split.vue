@@ -38,10 +38,6 @@ export default {
       type: Number,
       default: 0.3
     },
-    theme: {
-      type: String,
-      default: 'light'
-    },
     max: {
       type: Number,
       default: 0.9
@@ -67,8 +63,7 @@ export default {
     },
     classes () {
       return [
-        'split-pane-wrapper',
-        `${this.theme}`
+        'split-pane-wrapper'
       ]
     }
   },

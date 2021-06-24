@@ -17,7 +17,6 @@ const devConfig = {
     }
   },
   devServer: {
-    open: true,
     hot: true,
     port: 8080
   },
